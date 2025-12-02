@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="ClasesTorneo/ClasesTorneo.csproj" />
+  <Project Path="TorneoAPI/TorneoAPI.csproj" Id="e06a2996-d929-4e7a-895d-0f79fc313d40" />
+  <Project Path="TorneoUUtilidad/TorneoUUtilidad.csproj" Id="0b5b6a3a-d51f-4f5e-93c7-46d8335e8d93" />
 </Solution>
