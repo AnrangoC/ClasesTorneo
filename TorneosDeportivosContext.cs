@@ -19,17 +19,16 @@ public class TorneosDeportivosContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Relación Equipo -> Torneo (many Equipos belong to one Torneo)
+        
         modelBuilder.Entity<Equipo>()
             .HasOne(e => e.Torneo)
             .WithMany(t => t.Equipos)
             .HasForeignKey(e => e.TorneoId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // Relación Torneo -> Campeon (opcional, FK en Torneo)
         modelBuilder.Entity<Torneo>()
             .HasOne(t => t.Campeon)
-            .WithMany() // no inverse navigation to avoid ambigüedad
+            .WithMany() //
             .HasForeignKey<Torneo>(t => t.CampeonId)
             .OnDelete(DeleteBehavior.SetNull);
 
